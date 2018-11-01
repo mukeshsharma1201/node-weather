@@ -1,0 +1,27 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Weather App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukeshsharma1201/node-weather.git"
+  },
+  "author": "mukeshsharma1201",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukeshsharma1201/node-weather/issues"
+  },
+  "homepage": "https://github.com/mukeshsharma1201/node-weather#readme",
+  "keywords": [
+    "weather",
+    "app"
+  ],
+  "dependencies": {
+    "request": "^2.88.0",
+    "yargs": "^12.0.2"
+  }
+}
