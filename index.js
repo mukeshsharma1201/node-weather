@@ -7,9 +7,14 @@ var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiK
 
   request(url,function(err,resp,body){
     if(err){
-        console.log('Error Occured: ',err);
+        res.render('index', {weather: null, error: 'Error, please try again'});
     }else{
         let weather = JSON.parse(body);
-        console.log(`It's ${weather.main.temp} degrees in ${weather.name}`);
+        if(weather.main == undefined){
+            res.render('index', {weather: null, error: 'Error, please try again'});
+        }else{
+            let weatherText  = `It's ${weather.main.temp} degrees in ${weather.name}`;
+            res.render('index', {weather: weatherText, error: null});
+        }
     }
   });
